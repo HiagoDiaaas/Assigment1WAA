@@ -26,8 +26,7 @@ public class BookController {
                 new Book(3, "Sapiens: A Brief History of Humankind", "9780061120084")
         );
     }
-
-    // New endpoint to get a book by ID using WebClient
+    
     @GetMapping("/books/{id}")
     public Book getBookById(@PathVariable int id) {
         return bookService.getBookById(id);
